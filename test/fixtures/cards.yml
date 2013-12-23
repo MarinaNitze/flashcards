@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  front: MyString
+  back: MyString
+  mnemonic: MyString
+  category_id: 1
+  memorized: false
+
+two:
+  front: MyString
+  back: MyString
+  mnemonic: MyString
+  category_id: 1
+  memorized: false

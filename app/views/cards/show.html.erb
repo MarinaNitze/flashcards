@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Front:</strong>
+  <%= @card.front %>
+</p>
+
+<p>
+  <strong>Back:</strong>
+  <%= @card.back %>
+</p>
+
+<p>
+  <strong>Mnemonic:</strong>
+  <%= @card.mnemonic %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @card.category_id %>
+</p>
+
+<p>
+  <strong>Memorized:</strong>
+  <%= @card.memorized %>
+</p>
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>
