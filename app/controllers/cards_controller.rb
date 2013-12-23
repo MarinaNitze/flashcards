@@ -10,6 +10,8 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.json
   def show
+    @cards = Card.where(:category_id => @card.category_id, :memorized => false)
+    @random = @cards[rand(@cards.count)]
   end
 
   # GET /cards/new

@@ -1,0 +1,13 @@
+<h1>Welcome to DoodleCards!</h1>
+
+Choose a category to start:
+<p>
+<%= link_to 'All', '' %><br/>
+<% @categories.each do |category| %>
+  <%= link_to category.name, category %><br/>
+<% end %>
+</p>
+
+<p>
+<%= link_to 'Make a New Card', new_card_path %> | <%= link_to 'Edit Categories', categories_path %>
+</p>

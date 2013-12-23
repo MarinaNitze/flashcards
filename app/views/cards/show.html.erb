@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to_function @card.front, "$('.back_of_card').toggle()" %>
+<h1><%= link_to_function @card.front, "$('.back_of_card').toggle()" %></h1>
 
-<div class="back_of_card" style="display:none;">
+<div class="back_of_card" style="display:none;" class="center">
 <p>
-  <%= @card.back %>
+  <h2><%= @card.back %></h2>
 </p>
 
 <% unless @card.mnemonic == '' %>
@@ -13,20 +13,9 @@
   <%= @card.mnemonic %>
 </p>
 <% end %>
-
 <p>
-  <strong>Category:</strong>
-  <%= @card.category.name %>
-</p>
-
-<p>
-  <strong>Memorized:</strong>
-  <%= @card.memorized %>
-</p>
+<%= link_to 'Edit', edit_card_path(@card), class: 'btn'  %>
+<%= link_to 'Next DoodleCard', @random, class: 'btn btn-success' %><br />
+<small><%= link_to 'Back Home', cards_path %></small>
 </div>
-
-<p>
-<%= link_to 'Edit', edit_card_path(@card) %>
-<%= link_to("Next", @card.next) if @card.next %><br />
-<%= link_to 'Back to Categories', cards_path %>
 </p>
