@@ -26,6 +26,7 @@
 </div>
 
 <p>
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<%= link_to 'Edit', edit_card_path(@card) %>
+<%= link_to("Next", @card.next) if @card.next %><br />
+<%= link_to 'Back to Categories', cards_path %>
 </p>

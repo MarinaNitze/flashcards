@@ -24,10 +24,11 @@
     <%= f.text_field :mnemonic %>
   </div>
   <div class="field">
+    <%= f.label :category_id, "Category" %><br />
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :memorized %><br>
+    <%= f.label :memorized %>: 
     <%= f.check_box :memorized %>
   </div>
   <div class="actions">
