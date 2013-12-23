@@ -15,10 +15,12 @@ class CardsController < ApplicationController
   # GET /cards/new
   def new
     @card = Card.new
+    @categories = Category.all
   end
 
   # GET /cards/1/edit
   def edit
+    @categories = Category.all
   end
 
   # POST /cards

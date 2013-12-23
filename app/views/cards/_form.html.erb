@@ -24,8 +24,7 @@
     <%= f.text_field :mnemonic %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br>
-    <%= f.number_field :category_id %>
+    <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :memorized %><br>

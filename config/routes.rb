@@ -5,5 +5,5 @@ Flashcards::Application.routes.draw do
   resources :cards
   
   #Temporary
-  root :to => "home#index"
+  root :to => "cards#index"
 end
