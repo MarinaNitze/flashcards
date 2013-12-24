@@ -14,10 +14,9 @@
 </p>
 <% end %>
 
-<div class="btn-group-vertical">
-<%= button_to 'Missed It', {:action=>:increment,:id=>@card.id }, { :class => 'btn btn-danger btn-group-vertical' } %><%= button_to 'Got It!', {:action=>:decrement,:id=>@card.id}, { :class => 'btn btn-success btn-group-vertical' } %>
-</div>
+
+<%= button_to 'Missed It', {:action=>:increment,:id=>@card.id }, { :class => 'btn btn-danger btn-block' } %><%= button_to 'Got It!', {:action=>:decrement,:id=>@card.id}, { :class => 'btn btn-success btn-block' } %>
 <p>
-<small><%= link_to 'Edit', edit_card_path(@card) %> | <%= link_to 'Home', cards_path %></small>
+<small><%= link_to 'Edit', edit_card_path(@card) %> | <%= link_to 'Home', root_path %></small>
 </p>
 </div>

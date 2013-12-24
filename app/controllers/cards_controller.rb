@@ -14,6 +14,11 @@ class CardsController < ApplicationController
     @random = Card.random_weighted(:weight)
   end
   
+  def random
+    @random = Card.random_weighted(:weight)
+    redirect_to @random
+  end
+  
   def increment
     @random = Card.random_weighted(:weight)
     @card.increment!(:weight)

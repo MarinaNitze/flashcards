@@ -24,11 +24,7 @@
     <%= f.label :mnemonic %>
     <%= f.text_field :mnemonic %>
   </div>
-  <div class="field">
-    <%= f.label :category_id, "Category" %>
-    <%= f.collection_select :category_id, @categories, :id, :name %>
-  </div>
 
-    <%= f.submit 'Update', :class => 'btn btn-block' %>
+    <%= f.submit 'Update DoodleCard', :class => 'btn btn-block' %>
 
 <% end %>

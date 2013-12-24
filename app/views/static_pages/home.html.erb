@@ -1,13 +1,9 @@
 <h1>Welcome to DoodleCards!</h1>
 
-Choose a category to start:
 <p>
-<%= link_to 'All', '' %><br/>
-<% @categories.each do |category| %>
-  <%= link_to category.name, category %><br/>
-<% end %>
+<%= link_to 'Start!', random_path, class: 'btn btn-success btn-large' %>
 </p>
-
+<br />
 <p>
-<%= link_to 'Make a New Card', new_card_path %> | <%= link_to 'Edit Categories', categories_path %>
+<%= link_to 'Make a New DoodleCard', new_card_path, class: 'btn btn-primary btn-small' %>
 </p>

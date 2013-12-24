@@ -8,6 +8,7 @@ Flashcards::Application.routes.draw do
   post 'increment' => 'cards#increment'
   post 'decrement' => 'cards#decrement'
   
-  #Temporary
+  get 'random' => 'cards#random'
+  
   root :to => "static_pages#home"
 end
