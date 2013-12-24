@@ -1,11 +1,30 @@
 @import "bootstrap";
 
+.back_of_card {
+  text-align: center;
+}
+
+/* universal */
+/* thanks to Michael Hartl for this! */
+
+html {
+  overflow-y: scroll;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
 .center {
   text-align: center;
 }
 
-.back_of_card {
-  text-align: center;
+.center h1 {
+  margin-bottom: 10px;
 }
 
 /* typography */
