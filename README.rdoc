@@ -1,28 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mobile-optimized flashcard app. Cards appear in a *weighted* random order: as you progress, the cards you know will show up less often.
 
-Things you may want to cover:
+Weighted selection is done with a basic "weight" integer field in the database. When you miss a card, it increments by 1; when you know a card, it decrements by 1.
 
-* Ruby version
+Each card has a space to enter a relevant mnemonic device. If a card's mnemonic is blank, the mnemonic section is hidden.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+FUTURE: The database is set up to handle categories, but they are not implemented in the interface right now.
