@@ -7,7 +7,7 @@
       <th>Back</th>
       <th>Mnemonic</th>
       <th>Category</th>
-      <th>Memorized</th>
+      <th>Weight</th>
       <th></th>
       <th></th>
       <th></th>
@@ -21,7 +21,7 @@
         <td><%= card.back %></td>
         <td><%= card.mnemonic %></td>
         <td><%= card.category.name %></td>
-        <td><%= card.memorized %></td>
+        <td><%= card.weight %></td>
         <td><%= link_to 'Show', card %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>

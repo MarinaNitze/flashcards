@@ -13,10 +13,11 @@
   <%= @card.mnemonic %></em>
 </p>
 <% end %>
-<p>
-<%= link_to 'Missed It', @random, class: 'btn btn-danger' %>
-<%= link_to 'Got It!', @random, class: 'btn btn-success' %>
-<br />
-<small><%= link_to 'Edit', edit_card_path(@card) %> | <%= link_to 'Home', cards_path %></small>
+
+<div class="btn-group-vertical">
+<%= button_to 'Missed It', {:action=>:increment,:id=>@card.id }, { :class => 'btn btn-danger btn-group-vertical' } %><%= button_to 'Got It!', {:action=>:decrement,:id=>@card.id}, { :class => 'btn btn-success btn-group-vertical' } %>
 </div>
+<p>
+<small><%= link_to 'Edit', edit_card_path(@card) %> | <%= link_to 'Home', cards_path %></small>
 </p>
+</div>

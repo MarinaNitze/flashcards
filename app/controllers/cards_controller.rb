@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: [:show, :edit, :update, :destroy]
+  before_action :set_card, only: [:show, :edit, :update, :destroy, :increment, :decrement]
 
   # GET /cards
   # GET /cards.json
@@ -10,10 +10,22 @@ class CardsController < ApplicationController
   # GET /cards/1
   # GET /cards/1.json
   def show
-    @cards = Card.where(:category_id => @card.category_id, :memorized => false)
-    @random = @cards[rand(@cards.count)]
+    @cards = Card.where(:category_id => @card.category_id)
+    @random = Card.random_weighted(:weight)
   end
-
+  
+  def increment
+    @random = Card.random_weighted(:weight)
+    @card.increment!(:weight)
+    redirect_to @random
+  end
+  
+  def decrement
+    @random = Card.random_weighted(:weight)
+    @card.decrement!(:weight)
+    redirect_to @random
+  end
+  
   # GET /cards/new
   def new
     @card = Card.new
@@ -73,6 +85,6 @@ class CardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def card_params
-      params.require(:card).permit(:front, :back, :mnemonic, :category_id, :memorized)
+      params.require(:card).permit(:front, :back, :mnemonic, :category_id, :memorized, :weight)
     end
 end

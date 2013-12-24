@@ -28,10 +28,6 @@
     <%= f.label :category_id, "Category" %>
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
-  <div class="field">
-    Memorized: <%= f.check_box :memorized %><br/>
-    <small><em>Memorized cards are hidden from view</em></small>
-  </div>
 
     <%= f.submit 'Update', :class => 'btn btn-block' %>
 
