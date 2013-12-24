@@ -1,3 +1,4 @@
+
 <%= form_for(@card) do |f| %>
   <% if @card.errors.any? %>
     <div id="error_explanation">
@@ -12,26 +13,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :front %><br>
+    <%= f.label :front %>
     <%= f.text_field :front %>
   </div>
   <div class="field">
-    <%= f.label :back %><br>
+    <%= f.label :back %>
     <%= f.text_field :back %>
   </div>
   <div class="field">
-    <%= f.label :mnemonic %><br>
+    <%= f.label :mnemonic %>
     <%= f.text_field :mnemonic %>
   </div>
   <div class="field">
-    <%= f.label :category_id, "Category" %><br />
+    <%= f.label :category_id, "Category" %>
     <%= f.collection_select :category_id, @categories, :id, :name %>
   </div>
   <div class="field">
-    <%= f.label :memorized %>: 
-    <%= f.check_box :memorized %>
+    Memorized: <%= f.check_box :memorized %><br/>
+    <small><em>Memorized cards are hidden from view</em></small>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <%= f.submit 'Update', :class => 'btn btn-block' %>
+
 <% end %>

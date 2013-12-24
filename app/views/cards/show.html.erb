@@ -9,13 +9,14 @@
 
 <% unless @card.mnemonic == '' %>
 <p>
-  <strong>Mnemonic:</strong>
-  <%= @card.mnemonic %>
+  <em>
+  <%= @card.mnemonic %></em>
 </p>
 <% end %>
 <p>
-<%= link_to 'Edit', edit_card_path(@card), class: 'btn'  %>
-<%= link_to 'Next DoodleCard', @random, class: 'btn btn-success' %><br />
-<small><%= link_to 'Back Home', cards_path %></small>
+<%= link_to 'Missed It', @random, class: 'btn btn-danger' %>
+<%= link_to 'Got It!', @random, class: 'btn btn-success' %>
+<br />
+<small><%= link_to 'Edit', edit_card_path(@card) %> | <%= link_to 'Home', cards_path %></small>
 </div>
 </p>
