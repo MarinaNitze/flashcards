@@ -1,3 +1,4 @@
+<div class="doodlesmall">
 <p id="notice"><%= notice %></p>
 
 <h1><%= link_to_function @card.front, "$('.back_of_card').toggle()" %></h1>
@@ -21,4 +22,5 @@
 <p>
 <small><%= link_to 'Edit DoodleCard', edit_card_path(@card) %> | <%= link_to 'Home', root_path %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </small>
 </p>
+</div>
 </div>
