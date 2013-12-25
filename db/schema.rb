@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131224004532) do
+ActiveRecord::Schema.define(version: 20131225175206) do
 
   create_table "cards", force: true do |t|
     t.string   "front"
-    t.string   "back"
+    t.text     "back",        limit: 255
     t.string   "mnemonic"
     t.integer  "category_id"
     t.boolean  "memorized"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "weight",      default: 5
+    t.integer  "weight",                  default: 5
   end
 
   create_table "categories", force: true do |t|
