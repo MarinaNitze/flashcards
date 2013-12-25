@@ -15,7 +15,9 @@
 <% end %>
 
 
-<%= button_to 'Missed It', {:action=>:increment,:id=>@card.id }, { :class => 'btn btn-danger btn-block' } %><%= button_to 'Got It!', {:action=>:decrement,:id=>@card.id}, { :class => 'btn btn-success btn-block' } %>
+<%= button_to 'Missed It', {:action=>:increment,:id=>@card.id }, { :class => 'btn btn-danger btn-block' } %>
+<%= button_to 'Got It!', {:action=>:decrement,:id=>@card.id}, { :class => 'btn btn-success btn-block' } %>
+<%= link_to 'Skip', @random, class: 'btn btn-warning btn-block' %>
 <p>
 <small><%= link_to 'Edit DoodleCard', edit_card_path(@card) %> | <%= link_to 'Home', root_path %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </small>
 </p>
