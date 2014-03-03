@@ -21,6 +21,10 @@
     <%= f.text_field :back %>
   </div>
   <div class="field">
+    <%= f.label :category, :class => 'control-label' %>
+    <%= f.collection_select :category, @categories, :id, :name, {:include_blank => 'Select Category'}, {class: 'form-control'} %>
+  </div>
+  <div class="field">
     <%= f.label :mnemonic %>
     <%= f.text_field :mnemonic %>
   </div>
