@@ -11,6 +11,7 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
   }
 });
 </script>
+<div style="width:80%;margin:auto;">
 <%= form_for(@card) do |f| %>
   <% if @card.errors.any? %>
     <div id="error_explanation">
@@ -24,19 +25,17 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :front %><br />
-    <%= f.text_field :front %>
+    <%= f.text_field :front, :class => "form-control" %>
   </div>
-  <div class="field">
-	<span class="col-lg-8 col-md-12">
+  <div class="form-group" style="margin-left:auto;margin-right:auto;">
     	<%= f.text_area :back, :class => "tinymce" %>
 		<%= tinymce %>
-	</span>
   </div>
   
   <br />
-  <div class="form-group col-lg-12">
+  <div class="form-group">
   <%= f.label :categories, :class => 'control-label' %><br/>
   <div class="btn-group" data-toggle="buttons">
   <% @categories.each do |c| %>
@@ -54,12 +53,13 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
   </div>
   </div>
   <br />
-  <div class="field col-lg-12">
+  <div class="form-group">
     <%= f.label :mnemonic %><br />
-    <%= f.text_field :mnemonic %>
+    <%= f.text_field :mnemonic, :class => 'form-control' %>
   </div>
 
-  <div class="col-lg-12">
+  <div>
     <p><%= f.submit 'Update DoodleCard', :class => 'btn btn-large btn-success' %></p>
   </div>
 <% end %>
+</div>
