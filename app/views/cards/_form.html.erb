@@ -1,4 +1,15 @@
-
+<!-- Forces Bootstrap to show active state on toggle buttons -->
+<script>
+$("[data-toggle='buttons'] .btn").each(function(i, el) {
+  var $button = $(el);
+  var checked = $button.find("input[type='checkbox'], input[type='radio']").prop("checked");
+  if (checked) {
+    $button.addClass("active");
+  } else {
+    $button.removeClass("active");
+  }
+});
+</script>
 <%= form_for(@card) do |f| %>
   <% if @card.errors.any? %>
     <div id="error_explanation">
@@ -20,10 +31,19 @@
     <%= f.label :back %>
     <%= f.text_field :back %>
   </div>
-  <div class="field">
-    <%= f.label :category, :class => 'control-label' %>
-    <%= f.collection_select :category, @categories, :id, :name, {:include_blank => 'Select Category'}, {class: 'form-control'} %>
+  
+  <div class="form-group">
+  <%= f.label :category, :class => 'control-label' %><br/>
+  <div class="btn-group" data-toggle="buttons">
+  <% @categories.each do |cat| %>
+  <label class="btn btn-primary">
+    <%= f.check_box "card", "card_category_ids", {:checked => @card.categories.include?(cat), :name => 'card[category_ids][]'}, cat.id, nil %> <%= cat.name %>
+    </label>
+      <% end %>
+
   </div>
+  </div>
+  
   <div class="field">
     <%= f.label :mnemonic %>
     <%= f.text_field :mnemonic %>
