@@ -1,9 +1,5 @@
 == README
 
-This is a mobile-optimized flashcard app. Cards appear in a *weighted* random order: as you progress, the cards you know will show up less often.
-
-Weighted selection is done with a basic "weight" integer field in the database. When you miss a card, it increments by 1; when you know a card, it decrements by 1.
+This is a mobile-optimized flashcard app.
 
 Each card has a space to enter a relevant mnemonic device. If a card's mnemonic is blank, the mnemonic section is hidden.
-
-FUTURE: The database is set up to handle categories, but they are not implemented in the interface right now.
