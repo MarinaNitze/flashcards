@@ -5,7 +5,7 @@
 
 <div class="back_of_card" style="display:none;" class="center">
 <p>
-  <h2><%= @card.back %></h2>
+  <%= @card.back.html_safe %>
 </p>
 
 <% unless @card.mnemonic == '' %>

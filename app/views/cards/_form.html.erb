@@ -1,4 +1,5 @@
 <!-- Forces Bootstrap to show active state on toggle buttons -->
+<%= tinymce_assets %>
 <script>
 $("[data-toggle='buttons'] .btn").each(function(i, el) {
   var $button = $(el);
@@ -24,15 +25,18 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
   <% end %>
 
   <div class="field">
-    <%= f.label :front %>
+    <%= f.label :front %><br />
     <%= f.text_field :front %>
   </div>
   <div class="field">
-    <%= f.label :back %>
-    <%= f.cktext_area :back %>
+	<span class="col-lg-8 col-md-12">
+    	<%= f.text_area :back, :class => "tinymce" %>
+		<%= tinymce %>
+	</span>
   </div>
   
-  <div class="form-group">
+  <br />
+  <div class="form-group col-lg-12">
   <%= f.label :categories, :class => 'control-label' %><br/>
   <div class="btn-group" data-toggle="buttons">
   <% @categories.each do |c| %>
@@ -49,8 +53,8 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
 
   </div>
   </div>
-  
-  <div class="field">
+  <br />
+  <div class="field col-lg-12">
     <%= f.label :mnemonic %>
     <%= f.text_field :mnemonic %>
   </div>
