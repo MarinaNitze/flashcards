@@ -12,22 +12,22 @@ class CardsController < ApplicationController
   # GET /cards/1.json
   def show
     @cards = Card.where(:category_id => @card.category_id)
-    @random = Card.random_weighted(:weight)
+    @random = Card.order_by_rand.first
   end
   
   def random
-    @random = Card.random_weighted(:weight)
+    @random = Card.order_by_rand.first
     redirect_to @random
   end
   
   def increment
-    @random = Card.random_weighted(:weight)
+    @random = Card.order_by_rand.first
     @card.increment!(:weight)
     redirect_to @random
   end
   
   def decrement
-    @random = Card.random_weighted(:weight)
+    @random = Card.order_by_rand.first
     @card.decrement!(:weight)
     redirect_to @random
   end
