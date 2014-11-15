@@ -55,10 +55,11 @@ $("[data-toggle='buttons'] .btn").each(function(i, el) {
   </div>
   <br />
   <div class="field col-lg-12">
-    <%= f.label :mnemonic %>
+    <%= f.label :mnemonic %><br />
     <%= f.text_field :mnemonic %>
   </div>
 
-    <%= f.submit 'Update DoodleCard', :class => 'btn btn-block' %>
-
+  <div class="col-lg-12">
+    <p><%= f.submit 'Update DoodleCard', :class => 'btn btn-large btn-success' %></p>
+  </div>
 <% end %>
