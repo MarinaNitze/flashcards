@@ -17,6 +17,9 @@ gem 'bootstrap-sass', '2.3.2.0'
 # Weighted random selection
 gem 'randumb'
 
+# HTML Editor text box
+gem 'ckeditor'
+
 gem 'sass-rails', '4.0.1'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'

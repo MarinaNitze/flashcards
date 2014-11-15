@@ -22,5 +22,6 @@
 <p>
 <small><%= link_to 'Edit DoodleCard', edit_card_path(@card) %> | <%= link_to 'Home', root_path %> | <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> </small>
 </p>
+<p>Categories: <% @card.categories.each do |c| %> <%= c.name %> <% end %></p>
 </div>
 </div>
