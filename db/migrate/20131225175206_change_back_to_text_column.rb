@@ -1,4 +1,4 @@
-class ChangeBackToTextColumn < ActiveRecord::Migration
+class ChangeBackToTextColumn < ActiveRecord::Migration[5.1.6]
     def up
         change_column :cards, :back, :text
     end

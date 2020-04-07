@@ -1,4 +1,4 @@
-class CreateCards < ActiveRecord::Migration
+class CreateCards < ActiveRecord::Migration[5.1.6]
   def change
     create_table :cards do |t|
       t.string :front

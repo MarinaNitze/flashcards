@@ -1,4 +1,4 @@
-class AddJoinTableToCategories < ActiveRecord::Migration
+class AddJoinTableToCategories < ActiveRecord::Migration[5.1.6]
   def change
     create_table :cards_categories do |t|
           t.belongs_to :card
