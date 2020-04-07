@@ -4,7 +4,7 @@ ruby '2.6.3'
 gem 'rails', '5.1.6'
 
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '~> 1.3.13'
 end
 
 # For logging in
